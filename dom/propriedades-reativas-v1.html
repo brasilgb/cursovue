@@ -1,0 +1,30 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<di id="app">
+    <div class="caixas">
+        <div class="demo" :class="estilo1"
+             @click="aplicarC1 = !aplicarC1"></div>
+             <div class="demo"></div>
+             <div class="demo" :class="[classeCSS, {girar: aplicarGirar}]"></div>
+    </div>
+    <hr>
+    <input type="text" v-model="classeCSS">
+</di>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            aplicarC1: false,
+            classeCSS: 'c1',
+            aplicarGirar: true
+        },
+        computed: {
+            estilo1() {
+                return {
+                    c1: this.aplicarC1,
+                    c2: this.aplicarC1
+                }
+            }
+        }
+    })
+</script>
