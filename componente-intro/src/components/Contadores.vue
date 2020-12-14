@@ -1,6 +1,7 @@
 <template>
   <div class="contadores">
-     <app-contador/>
+     <app-contador v-for="c in 5" :key="c"/>
+     <button>?</button>
   </div>
 </template>
 
@@ -12,19 +13,5 @@ export default {
 </script>
 
 <style>
-.contadores span{
-    border-bottom: 1px solid #ccc;
-    height: 30px;
-    border-radius: 15px;
-}
 
-.contadores button{
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    background-color: coral;
-    color: #fff;
-    margin-left: 10px;
-    outline: none;
-}
 </style>
