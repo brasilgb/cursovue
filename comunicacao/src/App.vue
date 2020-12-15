@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import AppUsuario from "./components/Usuario.vue";
+import AppUsuario from "@/components/Usuario.vue";
 
 export default {
 	name: "app",
